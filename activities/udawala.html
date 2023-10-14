@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width ,intial-scale=1.0" >
+<title></title>
+<style type="text/css">
+	*{
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background: rgba(0,0,0,0.5);
+	
+}
+.main{
+	position: relative;
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+	margin-left: 20px;
+
+}
+.main li{
+	display: inline-block;
+}
+.main li a {
+	text-decoration: none;
+	padding: 5px 10px;
+	font-family: "Roboto",sans-serif;
+	color: black;
+
+}
+.active a {
+	border-bottom:  2px solid black;
+	opacity: .4;
+}
+.main li a:hover{
+	cursor: pointer;
+	font-size: 16px;
+	border-bottom:  2px solid black;
+	transition: all 0.2s ease-in;
+	opacity: .4;
+}
+
+.search-box {
+	position: absolute;
+	float: right;
+	margin-top: 50px;
+	left: 20%;
+	background: rgba(0,0,0,.6);
+	transform: translate(-50%, -50%);
+	height: 40px;
+	border-radius: 40px;
+	padding: 10px;
+}
+.search-btn {
+		color: #e84118;
+	border-radius: 50%;
+	float: right;
+	width: 40px;
+	height: 40px;
+
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search-txt{
+	border:none;
+	background:none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: white;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 40px;
+	width: 0px;
+}
+.search-box:hover >.search-txt{
+	width: 230px;
+	padding: 0 6px;
+}
+.login img {
+	margin-top: 10px;
+	float: right;
+	width: 50px;
+	opacity: 0.7;
+	margin-right: 10px;
+	padding: 10px;
+
+}
+.logo img {
+	margin-top: 10px;
+	float: left;
+	width: 100px;
+	height: 70px;
+	opacity: .9;
+	padding: 5px;
+}
+#one img {
+	width: 250px;
+	height: 150px;
+	transition:  0.8s;
+}
+
+#one img:hover {
+	transform: scale(1.2);
+}
+h1 {
+	text-align: center;
+	padding: 20px;
+	letter-spacing: 2px;
+}
+p { 
+	margin: 5px;
+	padding: 20px;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.img {
+	margin: 20px;
+}
+
+
+.top-button  {
+	position: fixed;
+	top: 90%;
+	left:  95%;
+}
+.top-button img {
+	box-shadow:0px 10px 20px rgba(0,0,0,2);
+	border-radius: 50%;
+	padding: 0;
+	opacity: .6;
+	width: 50px;
+	height: 50px;
+	float: right;
+	margin-right:  10px;
+}
+
+		#content{
+			display: grid;
+			grid-template-areas: 
+			"header header header"
+			"section section section "
+			"section section section "
+			"footer footer footer"
+
+
+		}
+		#content>*{
+				margin: 0px;
+		
+		}
+		header {
+			grid-area: header;
+		}
+		section {
+			grid-area: section;
+		}
+		footer {
+			background: #f2f2f2;
+			padding: 20px;
+			grid-area: footer;
+		}
+#one{
+			display: grid;
+			grid-template-areas: 
+			"..one1 one2 one3 ."
+			".. one4 one5 one6 ."
+		
+
+		}
+		#one>div{
+				margin: 10px;
+
+		
+		}
+		
+
+
+		.one1 {
+			grid-area:one1;
+		}
+		.one2 {
+		grid-area:one2;
+		}
+		.one3 {
+			grid-area:one3
+		}
+		.one4 {
+			grid-area:one4
+		}
+		.one5 {
+			grid-area:one5;
+		}
+		.one6 {
+			grid-area:one6
+		}
+		@media (max-width: 768px)
+{
+	ul{
+		width: 100%;
+	}
+	.main li {
+		border:1px solid grey; 
+		transition: 0.8s;
+	
+		display:block;
+
+		padding: 5px;
+	text-align: center;
+	}
+	ul li a {
+		font-size: 13px;
+letter-spacing: 5px;
+
+	}
+
+	 .main li:hover {
+	 	background: rgba(0,0,0,0.5);
+	 	color: #fff;
+		border:none; 
+	font-size: 15px;
+	 
+	 }
+		.main-nav { 
+			margin-top:  10%;
+			margin-left: -16%; 
+	}
+		.search-box {
+
+	left: 50%;
+	}	
+
+	.top-button {
+		right: 1%;
+	}	
+
+	#one{
+			display: grid;
+			grid-template-areas: 
+			". one1 one2  "
+			". one3 one4 "
+			".one5 one6"
+			
+
+		}
+
+}
+
+</style>
+</head>
+<body>
+<div id="content">
+	<header>
+				<div class="login">
+		<a href="../loginnew.html"><img src="../pic\a.png"></a>
+		
+	</div>
+	<div class="logo">
+		<img src="../pic\aa.png">
+	</div>
+	<nav >
+<ul class="main">
+	<li><a href="../index.html" class="btn btn1"><b>HOME</a></li>
+	<li><a href="../about.html" class="btn btn2">ABOUT</a></li>
+	<li><a href="../tour.html" class="btn btn3">TOURS</a></li>
+	<li><a href="../explore.html" class="btn btn4">EXPLORE</a></li>
+	<li  class="active"><a href="../travel.html" class="btn btn5">ACTIVTIES</a></li>
+	<li><a href="../gallery.html" class="btn btn6">GALLERY</a></li>
+	<li><a href="../cantact.html" class="btn btn7">CANTACT</b></a></li>
+</ul>
+</nav>
+<div class="search-box">
+	<input class="search-txt" type="name" name="" placeholder="Type to search">
+		<a class="search-btn" href="#">
+	<img class="fas fa-search" src="../pic\search.png" width="40px" height="40px"></a>
+		</a>
+</div>
+
+	</header>
+	<section>
+		<h1>​Udawalawe National Park</h1>
+		<p>Udawalawe National Park Being located on the boundary of Sabaragamuwa and Uva provinces of Sri Lanka. Udawalawe National Park is situated about 200 km south-east of Colombo. You can easily reach Udawalawa National Park from Colombo via Rathnapura – Pelmadulla – Colombage Ara – Thanamalwila Road and access to Udawalawe park entrance.
+​ <br>	<br>
+Initially, the objective of constructing this national park was to provide a sanctuary for the wild animals exiled due to the construction of the Udawalawe reservoir. Udawalawe reservoir is now considered as the main attraction for the elephants at the Udawalawe National Park. Established in the dry zone of the country, the sanctuary gets an annual rain fall of approximately 1,525 mm and the average temperature remains around 29.5C0. <br>
+Stretching over a land of 30,821 hectares, Udawalawe National Park is famous for its large population of elephants. Hence, this national park is ideal to observe the herds of marvelous Asian elephants in their unique natural habitats. It is known that about 400 elephants in total are sustaining here while about 250 of them are considered as permanently resident.
+<br><br>
+	Other than the elephants, the national park provides home for many other species of mammals such as the rusty-spotted cat, fishing cat, Sri Lankan leopard etc. The Sri Lankan sloth bear is rarely seen in Udawalawa national park. Sri Lankan sambar deer, Sri Lankan axis deer, Indian muntjac, Sri Lankan spotted chevrotain, wild boar and water buffalo are among other mammal species that could be seen. Golden jackal, Asian palm civet, Toque macaque, Tufted grey langur and Indian hare also reside in the park. The endemic Ceylon spiny mouse was also recorded in Udawalawe national park in 1989.
+<br><br>
+Udawalawe sanctuary is also known as a good bird watching site in Sri Lanka. Bird lovers would get a wonderful opportunity to observe many different varieties of birds including endemic species and migrants as well. Endemic birds such as Sri Lanka Spurfowl, Red-faced Malkoha, Sri Lanka Grey Hornbill and Brown-capped babbler are among the birds found in Udawalawa national park. The reservoir attracts a huge variety of water birds such a cormorants, the Spot-billed pelican, Asian open-bill, Painted stork, Black-headed ibis and Eurasian spoonbill.
+<br><br>
+Moreover, the open parkland attracts birds of prey such as White-bellied sea eagle, Crested serpent-eagle, Grey-headed fish eagle, Booted eagle, and Changeable hawk-eagle. For the visitors, driving through the park in a 4WD safari jeep is the only permitted way of observing the Udawalawe national park. A half day or full day jeep safari in the Udawalawa national park would certainly become an unfading memory in your life. Explore the wonders of Sri Lanka wild life while gaining a unique experience with a touch of adventure.
+</p>
+<h4>Rates for half day safari game drive at Udawalawe  National Park ​</h4>
+<img class="img"  src="../new\minp.png">
+
+<h1>More activities</h1> 
+<div id="one">
+		<div class="one1">
+			<img src="../new/elee.jpg">
+			<h3><a href="ele.html">Elephant Back Ride</a>
+</h3>
+		</div>
+				<div class="one2">
+					<img src="../new/elew.jpg">
+			<h3><a href="what.html" >Trincemalee Whale Watching</a>
+</h3>
+				</div>
+
+		<div class="one3">
+			<img src="../new/eler.jpg">
+			<h3><a href="mir.html">Mirissa Whale Watching</a>
+</h3>
+		</div>
+
+		<div class="one4">
+			<img src="../new/eleu.jpg">
+			<h3><a href="udawala.html">Udawalawe National Park</a>
+</h3>
+		</div>
+
+		<div class="one5">
+			<img src="../new/elen.jpg">
+			<h3><a href="min.html">Minneriya national park</a>
+</h3>
+		</div>
+
+		<div class="one6">
+			<img src="../new/eley.jpg">
+			<h3><a href="yala.html">Yala national Park</a>
+</h3>
+		</div>
+		</div>
+
+<div class="top-button">
+		<a href="#top"><img src="../pic\top.png"></a>
+	</div>
+	
+	</section>
+	<footer>dd</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width ,intial-scale=1.0" >
+<title></title>
+<style type="text/css">
+	*{
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background: rgba(0,0,0,0.5);
+	
+}
+.main{
+	position: relative;
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+	margin-left: 20px;
+
+}
+.main li{
+	display: inline-block;
+}
+.main li a {
+	text-decoration: none;
+	padding: 5px 10px;
+	font-family: "Roboto",sans-serif;
+	color: black;
+
+}
+.active a {
+	border-bottom:  2px solid black;
+	opacity: .4;
+}
+.main li a:hover{
+	cursor: pointer;
+	font-size: 16px;
+	border-bottom:  2px solid black;
+	transition: all 0.2s ease-in;
+	opacity: .4;
+}
+
+.search-box {
+	position: absolute;
+	float: right;
+	margin-top: 50px;
+	left: 20%;
+	background: rgba(0,0,0,.6);
+	transform: translate(-50%, -50%);
+	height: 40px;
+	border-radius: 40px;
+	padding: 10px;
+}
+.search-btn {
+		color: #e84118;
+	border-radius: 50%;
+	float: right;
+	width: 40px;
+	height: 40px;
+
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search-txt{
+	border:none;
+	background:none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: white;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 40px;
+	width: 0px;
+}
+.search-box:hover >.search-txt{
+	width: 230px;
+	padding: 0 6px;
+}
+.login img {
+	margin-top: 10px;
+	float: right;
+	width: 50px;
+	opacity: 0.7;
+	margin-right: 10px;
+	padding: 10px;
+
+}
+.logo img {
+	margin-top: 10px;
+	float: left;
+	width: 100px;
+	height: 70px;
+	opacity: .9;
+	padding: 5px;
+}
+#one img {
+	width: 250px;
+	height: 150px;
+	transition:  0.8s;
+}
+
+#one img:hover {
+	transform: scale(1.2);
+}
+h1 {
+	text-align: center;
+	padding: 20px;
+	letter-spacing: 2px;
+}
+p { 
+	margin: 5px;
+	padding: 20px;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+
+.img {
+	margin: 20px;
+}
+
+
+.top-button  {
+	position: fixed;
+	top: 90%;
+	left:  95%;
+}
+.top-button img {
+	box-shadow:0px 10px 20px rgba(0,0,0,2);
+	border-radius: 50%;
+	padding: 0;
+	opacity: .6;
+	width: 50px;
+	height: 50px;
+	float: right;
+	margin-right:  10px;
+}
+
+		#content{
+			display: grid;
+			grid-template-areas: 
+			"header header header"
+			"section section section "
+			"section section section "
+			"footer footer footer"
+
+
+		}
+		#content>*{
+				margin: 0px;
+		
+		}
+		header {
+			grid-area: header;
+		}
+		section {
+			grid-area: section;
+		}
+		footer {
+			background: #f2f2f2;
+			padding: 20px;
+			grid-area: footer;
+		}
+#one{
+			display: grid;
+			grid-template-areas: 
+			"..one1 one2 one3 ."
+			".. one4 one5 one6 ."
+		
+
+		}
+		#one>div{
+				margin: 10px;
+
+		
+		}
+		
+
+
+		.one1 {
+			grid-area:one1;
+		}
+		.one2 {
+		grid-area:one2;
+		}
+		.one3 {
+			grid-area:one3
+		}
+		.one4 {
+			grid-area:one4
+		}
+		.one5 {
+			grid-area:one5;
+		}
+		.one6 {
+			grid-area:one6
+		}
+		@media (max-width: 768px)
+{
+	ul{
+		width: 100%;
+	}
+	.main li {
+		border:1px solid grey; 
+		transition: 0.8s;
+	
+		display:block;
+
+		padding: 5px;
+	text-align: center;
+	}
+	ul li a {
+		font-size: 13px;
+letter-spacing: 5px;
+
+	}
+
+	 .main li:hover {
+	 	background: rgba(0,0,0,0.5);
+	 	color: #fff;
+		border:none; 
+	font-size: 15px;
+	 
+	 }
+		.main-nav { 
+			margin-top:  10%;
+			margin-left: -16%; 
+	}
+		.search-box {
+
+	left: 50%;
+	}	
+
+	.top-button {
+		right: 1%;
+	}	
+
+	#one{
+			display: grid;
+			grid-template-areas: 
+			". one1 one2  "
+			". one3 one4 "
+			".one5 one6"
+			
+
+		}
+
+}
+
+</style>
+</head>
+<body>
+<div id="content">
+	<header>
+				<div class="login">
+		<a href="../loginnew.html"><img src="../pic\a.png"></a>
+		
+	</div>
+	<div class="logo">
+		<img src="../pic\aa.png">
+	</div>
+	<nav >
+<ul class="main">
+	<li><a href="../index.html" class="btn btn1"><b>HOME</a></li>
+	<li><a href="../about.html" class="btn btn2">ABOUT</a></li>
+	<li><a href="../tour.html" class="btn btn3">TOURS</a></li>
+	<li><a href="../explore.html" class="btn btn4">EXPLORE</a></li>
+	<li  class="active"><a href="../travel.html" class="btn btn5">ACTIVTIES</a></li>
+	<li><a href="../gallery.html" class="btn btn6">GALLERY</a></li>
+	<li><a href="../cantact.html" class="btn btn7">CANTACT</b></a></li>
+</ul>
+</nav>
+<div class="search-box">
+	<input class="search-txt" type="name" name="" placeholder="Type to search">
+		<a class="search-btn" href="#">
+	<img class="fas fa-search" src="../pic\search.png" width="40px" height="40px"></a>
+		</a>
+</div>
+
+	</header>
+	<section>
+		<h1>Jeep safari in Minneriya national park </h1>
+		<p>Minneriya Jeep Safari is a one of the most popular activity among travelers who visit Sri Lanka. The safari can be customized at your choice from half day to full day both morning and evening hours.
+​ <br>	
+Minneriya National Park is a wildlife sanctuary located in the North Central province of Sri Lanka. Nature lovers on Minneriya Jeep Safari often spot large number of Sri Lankan Elephants gathering around to grass fields on the edges of the reservoir during the dry season. In addition there are two endemic monkeys of Sri Lanka, Large herbivorous mammals such as Sri Lankan sambar deer and Sri Lankan axis deer, Rare and endangered species such as Sri Lankan leopard and Sri Lankan sloth bear, the gray slender loris, large water birds such as lesser adjutant, painted stork, and spot-billed pelican, little cormorants, Great white pelican, ruddy turnstone, and grey heron. The endemic birds such as Sri Lanka jungle fowl, Sri Lanka hanging parrot, brown-capped babbler, Sri Lanka grey hornbill, black-crested bulbul and crimson-fronted barbet, eight species of endemic reptiles, saltwater crocodile, Indian python, Asian water monitor, and Bengal monitors and more. Minneriya Jeep Safari would be a valuable opportunity to observe unique and amazing wild animals in their natural habitats.
+​ <br>
+Suggested times to start and end Minneriya Jeep Safari are 5:30am to 8:30am during the morning time or 3:00pm to 6:00pm in the afternoon.</p>
+<h4>Rates for half day safari game drive at Minneriya National Park ​</h4>
+<img class="img"  src="../new\minp.png">
+<h1>More activities</h1> 
+<div id="one">
+	
+			<div class="one1">
+			<img src="../new/elee.jpg">
+			<h3><a href="ele.html">Elephant Back Ride</a>
+</h3>
+		</div>
+				<div class="one2">
+					<img src="../new/elew.jpg">
+			<h3><a href="what.html" >Trincemalee Whale Watching</a>
+</h3>
+				</div>
+
+		<div class="one3">
+			<img src="../new/eler.jpg">
+			<h3><a href="mir.html">Mirissa Whale Watching</a>
+</h3>
+		</div>
+
+		<div class="one4">
+			<img src="../new/eleu.jpg">
+			<h3><a href="udawala.html">Udawalawe National Park</a>
+</h3>
+		</div>
+
+		<div class="one5">
+			<img src="../new/elen.jpg">
+			<h3><a href="min.html">Minneriya national park</a>
+</h3>
+		</div>
+
+		<div class="one6">
+			<img src="../new/eley.jpg">
+			<h3><a href="yala.html">Yala national Park</a>
+</h3>
+		</div>
+		</div>
+
+<div class="top-button">
+		<a href="#top"><img src="../pic\top.png"></a>
+	</div>
+	
+	</section>
+	<footer>dd</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width ,intial-scale=1.0" >
+<title></title>
+<style type="text/css">
+	*{
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background: rgba(0,0,0,0.5);
+	
+}
+
+.main{
+	position: relative;
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+	margin-left: 20px;
+
+}
+.main li{
+	display: inline-block;
+}
+.main li a {
+	text-decoration: none;
+	padding: 5px 10px;
+	font-family: "Roboto",sans-serif;
+	color: black;
+
+}
+.active a {
+	border-bottom:  2px solid black;
+	opacity: .4;
+}
+.main li a:hover{
+	cursor: pointer;
+	font-size: 16px;
+	border-bottom:  2px solid black;
+	transition: all 0.2s ease-in;
+	opacity: .4;
+}
+
+.search-box {
+	position: absolute;
+	float: right;
+	margin-top: 50px;
+	left: 20%;
+	background: rgba(0,0,0,.6);
+	transform: translate(-50%, -50%);
+	height: 40px;
+	border-radius: 40px;
+	padding: 10px;
+}
+.search-btn {
+		color: #e84118;
+	border-radius: 50%;
+	float: right;
+	width: 40px;
+	height: 40px;
+
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search-txt{
+	border:none;
+	background:none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: white;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 40px;
+	width: 0px;
+}
+.search-box:hover >.search-txt{
+	width: 230px;
+	padding: 0 6px;
+}
+.login img {
+	margin-top: 10px;
+	float: right;
+	width: 50px;
+	opacity: 0.7;
+	margin-right: 10px;
+	padding: 10px;
+
+}
+.logo img {
+	margin-top: 10px;
+	float: left;
+	width: 100px;
+	height: 70px;
+	opacity: .9;
+	padding: 5px;
+}
+#one img {
+	width: 250px;
+	height: 150px;
+	transition:  0.8s;
+}
+
+#one img:hover {
+	transform: scale(1.2);
+}
+h1 {
+	text-align: center;
+	padding: 20px;
+	letter-spacing: 2px;
+}
+p { 
+	margin: 5px;
+	padding: 20px;
+}
+
+.img {
+	margin: 20px;
+}
+
+
+.top-button  {
+	position: fixed;
+	top: 90%;
+	left:  95%;
+}
+.top-button img {
+	box-shadow:0px 10px 20px rgba(0,0,0,2);
+	border-radius: 50%;
+	padding: 0;
+	opacity: .6;
+	width: 50px;
+	height: 50px;
+	float: right;
+	margin-right:  10px;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+
+		#content{
+			display: grid;
+			grid-template-areas: 
+			"header header header"
+			"section section section "
+			"section section section "
+			"footer footer footer"
+
+
+		}
+		#content>*{
+				margin: 0px;
+				padding: 0;
+		
+		}
+		header {
+			grid-area: header;
+		}
+		section {
+			grid-area: section;
+		}
+		footer {
+			background: #f2f2f2;
+			padding: 20px;
+			grid-area: footer;
+		}
+#one{
+			display: grid;
+			grid-template-areas: 
+			" one1 one2 one3 "
+			" one4 one5 one6 "
+		
+
+		}
+		#one>div{
+				margin: 10px;
+		
+		}
+		
+
+
+		.one1 {
+			grid-area:one1;
+		}
+		.one2 {
+		grid-area:one2;
+		}
+		.one3 {
+			grid-area:one3
+		}
+		.one4 {
+			grid-area:one4
+		}
+		.one5 {
+			grid-area:one5;
+		}
+		.one6 {
+			grid-area:one6
+		}
+
+@media (max-width: 768px)
+
+{
+	ul{
+		width: 100%;
+	}
+	.main li {
+		border:1px solid grey; 
+		transition: 0.8s;
+	
+		display:block;
+
+		padding: 5px;
+	text-align: center;
+	}
+	ul li a {
+		font-size: 13px;
+letter-spacing: 5px;
+
+	}
+
+	 .main li:hover {
+	 	background: rgba(0,0,0,0.5);
+	 	color: #fff;
+		border:none; 
+	font-size: 15px;
+	 
+	 }
+		.main-nav { 
+			margin-top:  10%;
+			margin-left: -16%; 
+	}
+		.search-box {
+
+	left: 50%;
+	}	
+
+	.top-button {
+		right: 1%;
+	}	
+	#one{
+			display: grid;
+			grid-template-areas: 
+			". one1 one2  "
+			". one3 one4 "
+			".one5 one6"
+			
+
+		}
+
+.img {
+	width:600px;
+	height: auto;
+
+}
+}
+
+</style>
+</head>
+<body>
+<div id="content">
+	<header>
+				<div class="login">
+		<a href="loginnew.html"><img src="..\pic\a.png"></a>
+		
+	</div>
+	<div class="logo">
+		<img src="..\pic\aa.png">
+	</div>
+	<nav >
+<ul class="main">
+	<li><a href="..\index.html" class="btn btn1"><b>HOME</a></li>
+	<li><a href="..\about.html" class="btn btn2">ABOUT</a></li>
+	<li><a href="..\tour.html" class="btn btn3">TOURS</a></li>
+	<li><a href="..\explore.html" class="btn btn4">EXPLORE</a></li>
+	<li  class="active"><a href="..\travel.html" class="btn btn5">ACTIVTIES</a></li>
+	<li><a href="..\gallery.html" class="btn btn6">GALLERY</a></li>
+	<li><a href="..\cantact.html" class="btn btn7">CANTACT</b></a></li>
+</ul>
+</nav>
+<div class="search-box">
+	<input class="search-txt" type="name" name="" placeholder="Type to search">
+		<a class="search-btn" href="#">
+	<img class="fas fa-search" src="..\pic\search.png" width="40px" height="40px"></a>
+		</a>
+</div>
+
+	</header>
+	<section>
+		<h1>Elephant Back Ride </h1>
+		<p>Riding on the back of the amazing giant in the wild would be an incredible experience in life. An elephant ride Sri Lanka will be a great opportunity to be so close to the majestic beast, while enjoying the views of nature, wild life and traditional lifestyles of the people in rural villages in Sri Lanka. Moreover, an elephant ride in Sri Lanka would allow you to observe the surroundings in a closer proximity. More than all the facts mentioned above, may be the most precious experience of this activity is getting to share a day in the life of an elephant.
+<br>
+Usually, well tamed elephants are used for these safaris and certainly the elephant will be accompanied by the mahout. During an elephant ride Sri Lanka, the passengers would be safely carried in a wooden saddle, which is a basket like enclosure fixed upon a wooden platform and placed on the back of the elephant. The saddle would carry four passengers at a time, safely and comfortably.  The riders should be alerted to bend down a bit when necessary in order to avoid being knocked by the branches of trees along the path during the journey.
+​ <br>
+In addition to riding on the back of the elephant and enjoying the natural surroundings and wildlife of the area, you would be able to observe the behaviors and the habitats of this marvelous mammal on earth. It is up to the holiday makers to share the day with the wondrous giant in certain ways like picnicking in the bush under the shadow of elephant either bathing, grooming or feeding it as well. It would be so exciting to see how obedient an elephant is once tamed and trained properly. Surpassing the massive physical strength of this giant in the wild, the mahout is capable of handling the elephant by giving the verbal commands in a special language and using the simple weapon called the ‘goad’.
+<br>
+Habarana is the most popular location in Sri Lanka for elephant safari rides. Habarana is located 210km north east from Colombo and is the transit point of the large herds of wild elephants at the National Parks of Minneriya and Kaudulla. Further, Habarana is a popular location among the wildlife enthusiasts and nature tourists. Moreover, Habarana being the central location of the cultural triangle of Sri Lanka, the culture tourists touring therein too grab the opportunity to enjoy an elephant ride in Sri Lanka. The irrigation reservoirs and waterways of the area bring in a riverine terrain where the elephants would wade through, or swim to reach the banks in the farther end. The ride would also take place over the main road, the pathways, villages, jungles, swamp and river.
+​ <br>
+No need to think twice about grabbing this unique experience through an exciting elephant ride while holidaying in the precious island Sri Lanka, which is a splendor of nature indeed.</p>
+<img class="img"  src="..\new/ele.jpg" width="800" height="300"><br>
+<h4>​​Above rates are inclusive of:​</h4>
+​ <br>
+<p>Free hotel pickup and drop off (Habarana Area)<br>
+2 ½ - 3 hours in the National Park (Duration of a game drive will be 2 ½ - 3 hours in both morning and afternoon).<br>
+Jeep hiring fees. <br>
+Entrance charges to the National Park. <br>
+Currently applicable all government taxes.</p>
+<h1>More activities</h1> 
+<div id="one">
+		<div class="one1">
+			<img src="../new/elee.jpg">
+			<h3><a href="ele.html">Elephant Back Ride</a>
+</h3>
+		</div>
+				<div class="one2">
+					<img src="../new/elew.jpg">
+			<h3><a href="what.html" >Trincemalee Whale Watching</a>
+</h3>
+				</div>
+
+		<div class="one3">
+			<img src="../new/eler.jpg">
+			<h3><a href="mir.html">Mirissa Whale Watching</a>
+</h3>
+		</div>
+
+		<div class="one4">
+			<img src="../new/eleu.jpg">
+			<h3><a href="udawala.html">Udawalawe National Park</a>
+</h3>
+		</div>
+
+		<div class="one5">
+			<img src="../new/elen.jpg">
+			<h3><a href="min.html">Minneriya national park</a>
+</h3>
+		</div>
+
+		<div class="one6">
+			<img src="../new/eley.jpg">
+			<h3><a href="yala.html">Yala national Park</a>
+</h3>
+		</div>
+		</div>
+
+<div class="top-button">
+		<a href="#top"><img src="..\pic/top.png"></a>
+	</div>
+	
+	</section>
+	<footer>dd</footer>
+</div>
+</body>
+</html>

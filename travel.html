@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="index.css">
+		<meta name="viewport" content="width=device-width ,intial-scale=1.0" >
+<style type="text/css">
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background: rgba(0,0,0,0.5);
+	
+}
+
+.main{
+	position: relative;
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+	margin-left: 20px;
+
+}
+.main li{
+	display: inline-block;
+}
+.main li a {
+	text-decoration: none;
+	padding: 5px 10px;
+	font-family: "Roboto",sans-serif;
+	color: black;
+
+}
+.active a {
+	border-bottom:  2px solid black;
+	opacity: .4;
+}
+.main li a:hover{
+	cursor: pointer;
+	font-size: 16px;
+	border-bottom:  2px solid black;
+	transition: all 0.2s ease-in;
+	opacity: .4;
+}
+
+.search-box {
+	position: absolute;
+	float: right;
+	margin-top: 50px;
+	left: 20%;
+	background: rgba(0,0,0,.6);
+	transform: translate(-50%, -50%);
+	height: 40px;
+	border-radius: 40px;
+	padding: 10px;
+}
+.search-btn {
+		color: #e84118;
+	border-radius: 50%;
+	float: right;
+	width: 40px;
+	height: 40px;
+
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search-txt{
+	border:none;
+	background:none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color: white;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 40px;
+	width: 0px;
+}
+.search-box:hover >.search-txt{
+	width: 230px;
+	padding: 0 6px;
+}
+.login img {
+	margin-top: 10px;
+	float: right;
+	width: 50px;
+	opacity: 0.7;
+	margin-right: 10px;
+	padding: 10px;
+
+}
+.logo img {
+	margin-top: 10px;
+	float: left;
+	width: 100px;
+	height: 70px;
+	opacity: .9;
+	padding: 5px;
+}
+
+@media (max-width: 768px)
+{
+	ul{
+		width: 100%;
+	}
+	.main li {
+		border:1px solid grey; 
+		transition: 0.8s;
+	
+		display:block;
+
+		padding: 5px;
+	text-align: center;
+	}
+	ul li a {
+		font-size: 13px;
+letter-spacing: 5px;
+
+	}
+
+	 .main li:hover {
+	 	background: rgba(0,0,0,0.5);
+	 	color: #fff;
+		border:none; 
+	font-size: 15px;
+	 
+	 }
+		.main-nav { 
+			margin-top:  10%;
+			margin-left: -16%; 
+	}
+		.search-box {
+
+	left: 50%;
+	}	
+
+	.top-button {
+		right: 1%;
+	}	
+}
+.box{
+float: left;
+	background:rgba(0,0,0,0.1);
+	width: 400px;
+	height: 400px;
+	margin-left: 10px;
+	margin-top: 20px;
+	padding: 	10px;
+	color: #2f2f2f;
+	border-radius: 10px;
+}
+h3{
+	text-align: center;
+	padding: 10px;
+
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+.box img {
+	
+	width: 400px;
+	height: 340px;
+}
+.top-button  {
+	position: fixed;
+	top: 90%;
+	left:  95%;
+}
+.top-button img {
+	box-shadow:0px 10px 20px rgba(0,0,0,2);
+	border-radius: 50%;
+	padding: 0;
+	opacity: .6;
+	width: 50px;
+	height: 50px;
+	float: right;
+	margin-right:  10px;
+}
+.header {
+	margin-top: 20px;
+}
+		#content{
+			display: grid;
+			grid-template-areas: 
+			"header header header header"
+			"section section section section "
+			"footer footer footer footer"
+
+
+		}
+		#content>*{
+				margin: 0px;
+		
+		}
+		header {
+			grid-area: header;
+		}
+		section {
+			grid-area: section;
+		}
+		nav {
+			grid-area: nav;
+		}
+		footer {
+			background: #f2f2f2;
+			padding: 20px;
+			grid-area: footer;
+		}	
+
+</style>
+	<title></title>
+</head>
+<body>
+
+<div id="content">
+	<header>
+		<div class="login">
+		<a href="loginnew.html"><img src="pic\a.png"></a>
+		
+	</div>
+	<div class="logo">
+		<img src="pic\aa.png">
+	</div>
+	<nav >
+<ul class="main">
+	<li ><a href="index.html" class="btn btn1"><b>HOME</a></li>
+	<li><a href="about.html" class="btn btn2">ABOUT</a></li>
+	<li><a href="tour.html" class="btn btn3">TOURS</a></li>
+	<li><a href="explore.html" class="btn btn4">EXPLORE</a></li>
+	<li class="active"><a href="#" class="btn btn5">ACTIVTIES</a></li>
+	<li><a href="gallery.html" class="btn btn6">GALLERY</a></li>
+	<li><a href="cantact.html" class="btn btn7">CANTACT</b></a></li>
+</ul>
+</nav>
+<div class="search-box">
+	<input class="search-txt" type="name" name="" placeholder="Type to search">
+		<a class="search-btn" href="#">
+	<img class="fas fa-search" src="pic\search.png" width="40px" height="40px"></a>
+		</a>
+</div>
+	</header>
+	
+<section>	
+
+<div class="box box1">
+	<center><img src="activities\wheel.jpg"></center>
+	<h3><a href="activities\ele.html">Elephant Back Ride</a></h3>
+</div>
+
+<div class="box box2">
+	<center><img src="activities\wheel.jpg"></center>
+	<h3><a href="activities\min.html">Minneriya national park Jeep Safari</a></h3>
+	
+</div>
+
+<div class="box box3">
+	<center><img src="activities\wheel.jpg"></center>
+	<h3><a href="activities\">Udawalawe National Park Jeep Safari </a></h3>
+	
+</div>
+
+<div class="box box4">
+	<center><img src="activities\wheel.jpg"></center>
+	<h3><a href="activities\">Yala National Park Jeep Safari </a></h3>
+	
+</div>
+
+<div class="box box5">
+	<center><img src="activities\wheel.jpg"></center>
+	<h3><a href="activities\mir.html">Mirissa Whale Watching Boat</a></h3>
+	
+</div>
+
+<div class="box box6">
+	<center><img src="activities\wheel.jpg"></center>
+	<h3><a href="activities\what.html">Trincemalee Whale Watching</a></h3>
+	
+</div>
+
+
+
+</section>
+<footer>
+	aaaaaaaaa
+</footer>

@@ -1,0 +1,115 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding:10px;	
+			font-family:sans-serif;
+
+		}
+
+		.main li {
+			text-decoration: none;
+			list-style: none;
+			padding:5px;
+		}
+		.main .fn {
+			float: left;
+		}
+		.main .ln {
+		}
+		.main input {
+			border-radius: 10px;
+			padding: 10px;
+			border: none;
+			width: auto;
+			height: 35px;
+		}
+		.rb input {
+
+			margin-top: -7px;
+			float: left;	
+		
+		}
+		.rb span {
+			margin: 10px;
+		}
+		li textarea {
+			width: 400px;
+			height: 100px;
+			border-radius: 10px;
+			padding: 10px;
+			border: none;
+		}
+		.box {
+			background: rgba(0,0,0,0.5);
+			width: 800px;
+			height: 1500px;
+		}
+		.sub {
+			margin-left: 200px;
+		}
+		.sub  input{
+			padding: 10px;
+			border-radius: 20px;
+			border: none;
+			text-align: center;	
+		}
+	</style>
+	<script src="form.js"></script>	
+</head>
+<body>
+	<div class="box">
+<h1>Registration Form</h1>
+
+Use tab keys margin-top move from one input field to the next.
+<form name='registration' onSubmit="return formvalidation();">
+<ul class="main">
+<li><label for="username">Name</label></li>
+<li class="fn"><input type="text" placeholder="First Name" name="fname" size="20" /></li>
+<li class="ln"><input type="text" placeholder="Last Name" name="lname" size="30" /></li>
+
+<li><label for="email">Email</label></li>
+<li><input type="text" name="email" size="50" /></li>
+
+<p>Number of Persons</p><br>
+<li><label for="adult">Adult</label></li>
+<li><input type="text" name="adult" size="30" /></li>
+
+<li><label for="ch6y">Child 6Y-11Y</label></li>
+<li><input type="text" name="ch6y" size="30" /></li>
+
+<li><label for="ch5y">Child Below 5Y</label></li>
+<li><input type="text" name="ch5y" size="30" /></li>
+
+<li><label for="phone">Phone Number</label></li>
+<li><input type="text" name="phone" placeholder="0782643284 or +94 078 264 3284" size="50" /></li>
+
+<li><label for="nat">Nationality</label></li>
+<li><input type="text" name="nat" size="50" /></li>
+
+<li><label for="doa">Date of arrival</label></li>
+<li><input type="text" name="doa" size="50" /></li>
+
+
+<li><label id="acc">Accommodatation Type</label></li>
+<li class="rb"><input type="radio" name="star" value="sh5" /><span>5 star hotel</span></li>
+<li class="rb"><input type="radio" name="star" value="st4" /><span>4 star hotel</span></li>
+<li class="rb"><input type="radio" name="star" value="st3" /><span>3 star hotel</span></li>
+<li class="rb"><input type="radio" name="star" value="bud" /><span>budget hotel</span></li>
+
+<li><label id="mp">Meal Plan</label></li>
+<li class="rb"><input type="radio" name="bb" value="bedb" /><span>Bed and breakfast</span></li>
+<li class="rb"><input type="radio" name="bb" value="halfb" /><span>Half board</span></li>
+
+
+<li><label for="comm">Comment</label></li>
+<li><textarea name="comm"  id="comm"></textarea></li>
+<li class="sub"><input type="submit" name="submit" value="Submit" /></li>
+</ul>
+</form>
+</div>
+</body>
+</html>
